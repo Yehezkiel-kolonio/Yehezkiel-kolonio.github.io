@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <title>My Portfolio | Yehezkiel Kolonio</title>
@@ -47,8 +48,8 @@
     <section class="jumbotron mt-5 text-center">
         <img src="img/profil.jpg" alt="Yehezkiel Kolonio" style="width: 250px;"
             class="rounded mx-auto d-block img-thumbnail">
-        <h1 class="display-4 fw-bold mt-2">Yehezkiel.T.Kolonio</h1>
-        <p class="lead">FRONT END DEVELOPER</p>
+        <h1 class="display-4 fw-bold mt-2">Yehezkiel Tulus Kolonio</h1>
+        <p class="lead"></p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffff" fill-opacity="1"
                 d="M0,64L48,90.7C96,117,192,171,288,197.3C384,224,480,224,576,186.7C672,149,768,75,864,85.3C960,96,1056,192,1152,218.7C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -67,14 +68,14 @@
                 </div>
             </div>
             <div class="row justify-content-center fs-5">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
                     <p style="text-align: justify;">Saya lulusan dari perguruan tinggi swasta di Manado yaitu STMIK
                         PARNA RAYA MANADO dengan
                         mengambil jurusan Komputer/Sistem Informasi. Saya lulus tahun 2019
                         dengan mendapatkan IPK 3,41 Skala
                         4,00. </p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                     <p style="text-align: justify;">Saya memiliki kemampuan di
                         bidang teknologi informasi dan
                         memiliki pribadi yang jujur, disiplin, berdedikasi dan
@@ -88,7 +89,6 @@
             </path>
         </svg>
     </section>
-
     <!--End-->
 
     <!--Project-->
@@ -101,7 +101,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="flip-left" data-aos-duration="500">
                         <img src="img/project/project1.jpg" class="card-img-top" alt="web-ecommerce">
                         <div class="card-body text-center">
                             <h5 class="card-title">Web E-commerce </h5>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
                         <img src="img/project/project2.jpg" class="card-img-top" alt="web-company">
                         <div class="card-body text-center">
                             <h5 class="card-title">Web Company Profile </h5>
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
                         <img src="img/project/project3.jpg" class="card-img-top" alt="...">
                         <div class="card-body text-center">
                             <h5 class="card-title">Admin Dashboard </h5>
@@ -128,7 +128,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffff" fill-opacity="1"
@@ -137,6 +136,7 @@
         </svg>
     </section>
     <!--End-->
+
 
     <!-- Contact -->
     <section id="contact">
@@ -187,6 +187,7 @@
     </section>
     <!-- End -->
 
+
     <!-- Footer -->
     <footer class="text-white text-center pb-5">
         <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a
@@ -198,6 +199,49 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        //const galleryImage = document.querySelectorAll('.');
+
+        //galleryImage.forEach((img i) => {
+        //  img.dataset.aos = 'fade-down';
+        // img.dataset.aosDelay = 'i * 50';
+        //})
+
+        AOS.init({
+            once: true,
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/TextPlugin.min.js"></script>
+    <script>
+        gsap.registerPlugin(TextPlugin);
+        gsap.to('.lead', {
+            duration: 2,
+            delay: 1.5,
+            text: 'FRONT END DEVELOPER'
+        });
+        gsap.from(".jumbotron img", {
+            duration: 1,
+            rotateY: 360,
+            opacity: 0,
+        });
+        gsap.from(".navbar", {
+            duration: 1.5,
+            y: '-100%',
+            opacity: 0,
+            ease: 'bounce'
+        });
+        gsap.from(".display-4", {
+            duration: 1,
+            x: -50,
+            opacity: 0,
+            delay: 0.5,
+            ease: 'back'
+        });
     </script>
 
     <script>
