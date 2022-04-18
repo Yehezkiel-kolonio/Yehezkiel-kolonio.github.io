@@ -58,8 +58,3 @@ section {
     transform: perspective(1000px);
     transform: translateZ(20px);
 }
-
-.dark-mode {
-    background-color: black;
-    color: white;
-}
