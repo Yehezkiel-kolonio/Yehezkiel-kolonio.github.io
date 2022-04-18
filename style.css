@@ -57,4 +57,10 @@ section {
     transform-style: preserve-3d;
     transform: perspective(1000px);
     transform: translateZ(20px);
+    width: 200px;
+    margin-left: 70px;
+}
+
+.gallery-img {
+    width: 200px;
 }
