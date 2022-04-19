@@ -58,7 +58,7 @@ section {
     transform: perspective(1000px);
     transform: translateZ(20px);
     width: 200px;
-    margin-left: 70px;
+    margin-left: 75px;
 }
 
 .gallery-img {
